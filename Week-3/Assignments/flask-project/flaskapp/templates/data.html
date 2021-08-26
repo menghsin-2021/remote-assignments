@@ -1,0 +1,22 @@
+<div id="sum">
+    <!--  如果number 和 sum 都存在  -->
+    {% if number and sum %}
+        {% if number > 3 and sum %}
+            <p>1 + 2 + .... + {{ number }} = {{ sum }} </p>
+        {% elif number == 3 %}
+            <p>1 + 2 + 3  = {{ sum }} </p>
+        {% elif number == 2 %}
+            <p>1 + 2  = {{ sum }} </p>
+        {% elif number == 1 %}
+            <p>{{ number }}</p>
+        {% endif %}
+    {% endif %}
+
+    {% with messages = get_flashed_messages(with_categories=True) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="notification {{ category }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</div>

@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block title %}
+{{super()}} | Sum
+{% endblock %}
+
+{% block content %}
+    <div id="sum">
+        <input type="text" value="請輸入大於 0 的正整數" id="number">
+        <button id="btn">加總 1 ~ 您輸入的數字</button>
+    </div>
+    <div>
+        <h2>加總結果：</h2>
+        <div id="result"></div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="/static/js/sumN.js"></script>
+{% endblock %}

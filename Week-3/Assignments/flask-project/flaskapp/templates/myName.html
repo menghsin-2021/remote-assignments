@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}
+{{ super() }} | trackName
+{% endblock %}
+
+{% block content %}
+      <form id=userid-form action = "/trackName" method = "GET">
+         <p><h3>Enter userID</h3></p>
+         <p><input id='userid' type = 'text' name = 'name'/></p>
+         <p><input id='btn' type = 'submit' value = 'Login'/></p>
+      </form>
+{% endblock %}
+{% block scripts %}
+
+{% endblock %}
